@@ -1,0 +1,47 @@
+package py.hvillalba.microsol_app.util;
+
+public class Constant {
+    public static final String ACTIVITY_IS_DELIVERY = "activity_is_delivery";
+    public static final String ADDRESS_ID = "address_id";
+    public static final String ADD_GEOFENCES = "add_geofences";
+    public static final String BRANCH_ID = "branch_id";
+    public static final int CALL_PERMISSION = 7000;
+    public static final int CAMERA_PERMISSION = 6000;
+    public static final String CART_DETAIL_ID = "cart_detail_id";
+    public static final String CART_ID = "cart_id";
+    public static final String CATEGORIA_ID = "categoria_id";
+    public static final String CERCA_DE_MI = "cerca_de_mi";
+    public static final String CERCA_DE_MI_ADDRESS = "cerca_de_mi_address";
+    public static final int DELIVERY_DELAY = 15;
+    public static final String DOCUMENT_NUMBER = "document_number";
+    public static final String ENTRADA = "entrada";
+    public static final String FCM_TOKEN = "fcm_token";
+    public static final String FIRST_LOAD = "first_load";
+    public static final String FIRST_NAME = "first_name";
+    public static final String FRANCHISE_ID = "franchise_id";
+    public static final String GO_MAIN_ACTIVITY = "go_main_activity";
+    public static final String GO_REGISTER_ACTIVITY = "go_register_activity";
+    public static final String HISTORY_ID = "history_id";
+    public static final String HORARIO_ALMUERZO = "horario_almuerzo";
+    private static final String IP = "181.122.126.180";
+    public static final String IS_SOUND_ENABLED = "is_sound_enabled";
+    public static final String KEY_ACCURACY = "accuracy";
+    public static final String KEY_ANGLE = "angle";
+    public static final String KEY_DEVICE = "id";
+    public static final String KEY_DISTANCE = "distance";
+    public static final String KEY_INTERVAL = "interval";
+    public static final String KEY_STATUS = "status";
+    public static final String KEY_URL = "url";
+    public static final String LAST_NAME = "last_name";
+    public static final String LOCATION = "location";
+    public static final int LOCATION_PERMISSION = 5000;
+    public static final String LOGUEADO = "logueado";
+    private static final String PORT = "8080";
+    public static final String PRODUCT_ID = "product_id";
+    public static final String SALIDA = "salida";
+    public static final int TYPE_DELIVERY = 1;
+    public static final int TYPE_PICKUP = 2;
+    public static final String URL_PATH = "http://181.122.126.4:8080/credi-rest/api/v1/";
+            //"http://181.122.126.180:8080/credi-rest/api/v1/";
+    public static final String URL_PERFIL = "url_perfil";
+}

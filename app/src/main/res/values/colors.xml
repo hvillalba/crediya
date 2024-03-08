@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="gris">#A7A0A0</color>
+    <color name="negro">#3D3A3A</color>
+    <color name="transparente">#00000000</color>
+    <color name="verde">#37E007</color>
+
+    <!--Colores de los botones-->
+    <color name="blackButton">#333333</color>
+    <color name="grayActivity">#F5F5F5</color>
+
+    <!--Gradients-->
+    <color name="amarilloClaro">#F8E05C</color>
+    <color name="amarilloOscuro">#FF4E00</color>
+    <color name="verdeClaro">#8AFF51</color>
+    <color name="verdeOscuro">#00A428</color>
+    <color name="rojoClaro">#F73A3A</color>
+    <color name="rojoOscuro">#AF003C</color>
+    <color name="transparent">#00000000</color>
+    <color name="button_inactive">#999999</color>
+
+    <!--Botones de Estados-->
+    <color name="estadoRojo">#F2002C</color>
+    <color name="estadoAmarillo">#FDA416</color>
+    <color name="test">#009624</color>
+    <color name="estadoVerde">#00BC8B</color>
+    <color name="greenMonchisDefault">#00BE8A</color>
+    <color name="azul">#5BC2F1</color>
+</resources>

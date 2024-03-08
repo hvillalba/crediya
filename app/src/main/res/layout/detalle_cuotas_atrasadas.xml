@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:background="@color/grayActivity" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="5dp" app:cardCornerRadius="5dp" app:cardElevation="3dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="50">
+                <LinearLayout android:layout_gravity="left" android:orientation="vertical" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="7pt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="nombres: "/>
+                    <TextView android:textSize="8pt" android:textColor="@color/blackButton" android:id="@+id/tvCliente" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hector Villalba"/>
+                    <TextView android:textSize="7pt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="nro. Documento"/>
+                    <TextView android:textSize="8pt" android:textColor="@color/blackButton" android:id="@+id/tvCi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5.480.104"/>
+                    <TextView android:textSize="7pt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="credito Nro."/>
+                    <TextView android:textSize="8pt" android:textColor="@color/blackButton" android:id="@+id/tvIdCredito" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="500"/>
+                    <TextView android:textSize="7pt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="cuota "/>
+                    <TextView android:textSize="8pt" android:textColor="@color/blackButton" android:id="@+id/tvCuota" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12"/>
+                    <TextView android:textSize="7pt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="frecuencia "/>
+                    <TextView android:textSize="8pt" android:textColor="@color/blackButton" android:id="@+id/tvFrequencia" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="MENSUAL"/>
+                    <TextView android:textSize="7pt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="f. cobro "/>
+                    <TextView android:textSize="8pt" android:textColor="@color/blackButton" android:id="@+id/tvFCobro" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="EFECTIVO"/>
+                    <TextView android:textSize="7pt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="desembolso"/>
+                    <TextView android:textSize="8pt" android:textColor="@color/blackButton" android:id="@+id/tvDesembolso" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="30-05-2021"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:padding="5dp" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="50">
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="0dp" android:layout_weight="50">
+                    <TextView android:textSize="7pt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="vencimiento "/>
+                    <TextView android:textSize="8pt" android:textColor="@color/blackButton" android:id="@+id/tvVencimiento" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="30-05-2021"/>
+                    <TextView android:textSize="7pt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fecha Ult. Pago "/>
+                    <TextView android:textSize="8pt" android:textColor="@color/blackButton" android:id="@+id/tvFecUltPago" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="30-05-2021"/>
+                    <TextView android:textSize="7pt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="mora"/>
+                    <TextView android:textSize="8pt" android:textColor="@color/estadoRojo" android:id="@+id/tvMora" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="100.000"/>
+                    <TextView android:textSize="7pt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="capital"/>
+                    <TextView android:textSize="7pt" android:textColor="@color/blackButton" android:id="@+id/tvCapital" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10000000"/>
+                    <TextView android:textSize="7pt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="dias atraso"/>
+                    <TextView android:textSize="7pt" android:textColor="@color/estadoRojo" android:id="@+id/tvDiasAtraso" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="11 dias"/>
+                    <TextView android:textSize="7pt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="interes"/>
+                    <TextView android:textSize="7pt" android:textColor="@color/blackButton" android:id="@+id/tvInteres" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="50.000"/>
+                    <TextView android:textSize="7pt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="total"/>
+                    <TextView android:textSize="8pt" android:textStyle="bold" android:textColor="@color/blackButton" android:id="@+id/tvTotal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1.550.000"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

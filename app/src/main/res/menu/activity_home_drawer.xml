@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/extractoCuenta"
+            android:icon="@drawable/cuenta"
+            android:title="Extracto Cuenta" />
+        <item
+            android:id="@+id/extractoCartera"
+            android:icon="@drawable/cuenta"
+            android:title="Extracto Cartera" />
+        <item
+            android:id="@+id/sincro"
+            android:icon="@drawable/sincro"
+            android:title="Sincronizacion" />
+        <item
+            android:id="@+id/cerrarSesion"
+            android:icon="@drawable/cerrar"
+            android:title="Cerrar Sesion" />
+
+    </group>
+</menu>
