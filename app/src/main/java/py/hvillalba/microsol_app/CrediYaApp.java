@@ -14,7 +14,11 @@ public class CrediYaApp extends MultiDexApplication {
         super.onCreate();
         MultiDex.install(this);
         Realm.init(getApplicationContext());
-        RealmConfiguration build = new RealmConfiguration.Builder().name("crediya.realm").schemaVersion(1).build();
+        RealmConfiguration build = new RealmConfiguration
+                .Builder()
+                .allowWritesOnUiThread(true)
+                .name("crediya.realm")
+                .schemaVersion(1).build();
         Realm.setDefaultConfiguration(build);
         Realm.compactRealm(build);
         Log.e("CrediyaApp", "Seteando configuration Realm");

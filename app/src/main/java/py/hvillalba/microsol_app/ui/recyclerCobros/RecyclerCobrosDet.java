@@ -1,15 +1,26 @@
 package py.hvillalba.microsol_app.ui.recyclerCobros;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Filter;
 import android.widget.Filterable;
+import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
+
+import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
+
 import py.hvillalba.microsol_app.R;
 import py.hvillalba.microsol_app.data.CobrosDTO;
+import py.hvillalba.microsol_app.data.CuotaDTO;
+import py.hvillalba.microsol_app.ui.ExtractoDetalleActivity;
 
 public class RecyclerCobrosDet extends RecyclerView.Adapter<CustomViewHolderCuotasDetalle> implements Filterable {
     Context context;
@@ -36,135 +47,35 @@ public class RecyclerCobrosDet extends RecyclerView.Adapter<CustomViewHolderCuot
     /* JADX WARNING: Removed duplicated region for block: B:12:0x00bd A[Catch:{ Exception -> 0x0151 }] */
     /* JADX WARNING: Removed duplicated region for block: B:13:0x00d8 A[Catch:{ Exception -> 0x0151 }] */
     /* Code decompiled incorrectly, please refer to instructions dump. */
-    public void onBindViewHolder(py.hvillalba.microsol_app.ui.recyclerCobros.CustomViewHolderCuotasDetalle r7, int r8) {
-        /*
-            r6 = this;
-            java.lang.String r8 = ""
-            java.lang.String r0 = "###,###,###"
-            java.util.List<py.hvillalba.microsol_app.data.CobrosDTO> r1 = r6.listFiltered     // Catch:{ Exception -> 0x0151 }
-            int r2 = r7.getAdapterPosition()     // Catch:{ Exception -> 0x0151 }
-            java.lang.Object r1 = r1.get(r2)     // Catch:{ Exception -> 0x0151 }
-            py.hvillalba.microsol_app.data.CobrosDTO r1 = (py.hvillalba.microsol_app.data.CobrosDTO) r1     // Catch:{ Exception -> 0x0151 }
-            android.widget.TextView r2 = r7.tvCliente     // Catch:{ Exception -> 0x0151 }
-            py.hvillalba.microsol_app.data.ClienteDTO r3 = r1.getCliente()     // Catch:{ Exception -> 0x0151 }
-            java.lang.String r3 = r3.getNombreapellido()     // Catch:{ Exception -> 0x0151 }
-            r2.setText(r3)     // Catch:{ Exception -> 0x0151 }
-            android.widget.TextView r2 = r7.tvNroCi     // Catch:{ Exception -> 0x0151 }
-            py.hvillalba.microsol_app.data.ClienteDTO r3 = r1.getCliente()     // Catch:{ Exception -> 0x0151 }
-            java.lang.String r3 = r3.getNrodoc()     // Catch:{ Exception -> 0x0151 }
-            r2.setText(r3)     // Catch:{ Exception -> 0x0151 }
-            android.widget.TextView r2 = r7.tvCreditoNro     // Catch:{ Exception -> 0x0151 }
-            java.lang.StringBuilder r3 = new java.lang.StringBuilder     // Catch:{ Exception -> 0x0151 }
-            r3.<init>()     // Catch:{ Exception -> 0x0151 }
-            r3.append(r8)     // Catch:{ Exception -> 0x0151 }
-            java.lang.Integer r4 = r1.getIdcredito()     // Catch:{ Exception -> 0x0151 }
-            r3.append(r4)     // Catch:{ Exception -> 0x0151 }
-            java.lang.String r3 = r3.toString()     // Catch:{ Exception -> 0x0151 }
-            r2.setText(r3)     // Catch:{ Exception -> 0x0151 }
-            android.widget.TextView r2 = r7.tvCuota     // Catch:{ Exception -> 0x0151 }
-            java.lang.StringBuilder r3 = new java.lang.StringBuilder     // Catch:{ Exception -> 0x0151 }
-            r3.<init>()     // Catch:{ Exception -> 0x0151 }
-            r3.append(r8)     // Catch:{ Exception -> 0x0151 }
-            java.lang.Integer r4 = r1.getNrocuota()     // Catch:{ Exception -> 0x0151 }
-            r3.append(r4)     // Catch:{ Exception -> 0x0151 }
-            java.lang.String r4 = "/"
-            r3.append(r4)     // Catch:{ Exception -> 0x0151 }
-            java.lang.Integer r4 = r1.getCantidadCuotas()     // Catch:{ Exception -> 0x0151 }
-            r3.append(r4)     // Catch:{ Exception -> 0x0151 }
-            java.lang.String r3 = r3.toString()     // Catch:{ Exception -> 0x0151 }
-            r2.setText(r3)     // Catch:{ Exception -> 0x0151 }
-            android.widget.TextView r2 = r7.tvFCobro     // Catch:{ Exception -> 0x0151 }
-            java.lang.StringBuilder r3 = new java.lang.StringBuilder     // Catch:{ Exception -> 0x0151 }
-            r3.<init>()     // Catch:{ Exception -> 0x0151 }
-            r3.append(r8)     // Catch:{ Exception -> 0x0151 }
-            py.hvillalba.microsol_app.data.FormacobrocreditoDTO r8 = r1.getFormacobrocredito()     // Catch:{ Exception -> 0x0151 }
-            java.lang.String r8 = r8.getDescripcion()     // Catch:{ Exception -> 0x0151 }
-            r3.append(r8)     // Catch:{ Exception -> 0x0151 }
-            java.lang.String r8 = r3.toString()     // Catch:{ Exception -> 0x0151 }
-            r2.setText(r8)     // Catch:{ Exception -> 0x0151 }
-            java.text.SimpleDateFormat r8 = new java.text.SimpleDateFormat     // Catch:{ Exception -> 0x0151 }
-            java.lang.String r2 = "yyyy-MM-dd"
-            java.util.Locale r3 = java.util.Locale.US     // Catch:{ Exception -> 0x0151 }
-            r8.<init>(r2, r3)     // Catch:{ Exception -> 0x0151 }
-            java.util.Date r2 = r1.getFechacobro()     // Catch:{ Exception -> 0x0098 }
-            java.lang.String r2 = r8.format(r2)     // Catch:{ Exception -> 0x0098 }
-            android.widget.TextView r3 = r7.tvDesembolso     // Catch:{ Exception -> 0x0098 }
-            r3.setText(r2)     // Catch:{ Exception -> 0x0098 }
-        L_0x0098:
-            java.util.Date r2 = r1.getFechavencimiento()     // Catch:{ Exception -> 0x00a5 }
-            java.lang.String r2 = r8.format(r2)     // Catch:{ Exception -> 0x00a5 }
-            android.widget.TextView r3 = r7.tvVencimiento     // Catch:{ Exception -> 0x00a5 }
-            r3.setText(r2)     // Catch:{ Exception -> 0x00a5 }
-        L_0x00a5:
-            java.util.Date r2 = r1.getFechacobro()     // Catch:{ Exception -> 0x00b2 }
-            java.lang.String r8 = r8.format(r2)     // Catch:{ Exception -> 0x00b2 }
-            android.widget.TextView r2 = r7.tvFechaUltPago     // Catch:{ Exception -> 0x00b2 }
-            r2.setText(r8)     // Catch:{ Exception -> 0x00b2 }
-        L_0x00b2:
-            java.lang.Integer r8 = r1.getAtraso()     // Catch:{ Exception -> 0x0151 }
-            int r8 = r8.intValue()     // Catch:{ Exception -> 0x0151 }
-            r2 = 1
-            if (r8 != r2) goto L_0x00d8
-            android.widget.TextView r8 = r7.tvDiasAtraso     // Catch:{ Exception -> 0x0151 }
-            java.lang.StringBuilder r2 = new java.lang.StringBuilder     // Catch:{ Exception -> 0x0151 }
-            r2.<init>()     // Catch:{ Exception -> 0x0151 }
-            java.lang.Integer r3 = r1.getAtraso()     // Catch:{ Exception -> 0x0151 }
-            r2.append(r3)     // Catch:{ Exception -> 0x0151 }
-            java.lang.String r3 = " día"
-            r2.append(r3)     // Catch:{ Exception -> 0x0151 }
-            java.lang.String r2 = r2.toString()     // Catch:{ Exception -> 0x0151 }
-            r8.setText(r2)     // Catch:{ Exception -> 0x0151 }
-            goto L_0x00f2
-        L_0x00d8:
-            android.widget.TextView r8 = r7.tvDiasAtraso     // Catch:{ Exception -> 0x0151 }
-            java.lang.StringBuilder r2 = new java.lang.StringBuilder     // Catch:{ Exception -> 0x0151 }
-            r2.<init>()     // Catch:{ Exception -> 0x0151 }
-            java.lang.Integer r3 = r1.getAtraso()     // Catch:{ Exception -> 0x0151 }
-            r2.append(r3)     // Catch:{ Exception -> 0x0151 }
-            java.lang.String r3 = " días"
-            r2.append(r3)     // Catch:{ Exception -> 0x0151 }
-            java.lang.String r2 = r2.toString()     // Catch:{ Exception -> 0x0151 }
-            r8.setText(r2)     // Catch:{ Exception -> 0x0151 }
-        L_0x00f2:
-            android.widget.TextView r8 = r7.tvMora     // Catch:{ Exception -> 0x0151 }
-            java.text.DecimalFormat r2 = new java.text.DecimalFormat     // Catch:{ Exception -> 0x0151 }
-            r2.<init>(r0)     // Catch:{ Exception -> 0x0151 }
-            java.lang.Double r3 = r1.getMora()     // Catch:{ Exception -> 0x0151 }
-            java.lang.String r2 = r2.format(r3)     // Catch:{ Exception -> 0x0151 }
-            r8.setText(r2)     // Catch:{ Exception -> 0x0151 }
-            android.widget.TextView r8 = r7.tvCapital     // Catch:{ Exception -> 0x0151 }
-            java.text.DecimalFormat r2 = new java.text.DecimalFormat     // Catch:{ Exception -> 0x0151 }
-            r2.<init>(r0)     // Catch:{ Exception -> 0x0151 }
-            java.lang.Double r3 = r1.getCapital()     // Catch:{ Exception -> 0x0151 }
-            java.lang.String r2 = r2.format(r3)     // Catch:{ Exception -> 0x0151 }
-            r8.setText(r2)     // Catch:{ Exception -> 0x0151 }
-            android.widget.TextView r8 = r7.tvInteres     // Catch:{ Exception -> 0x0151 }
-            java.text.DecimalFormat r2 = new java.text.DecimalFormat     // Catch:{ Exception -> 0x0151 }
-            r2.<init>(r0)     // Catch:{ Exception -> 0x0151 }
-            java.lang.Double r3 = r1.getInteres()     // Catch:{ Exception -> 0x0151 }
-            java.lang.String r2 = r2.format(r3)     // Catch:{ Exception -> 0x0151 }
-            r8.setText(r2)     // Catch:{ Exception -> 0x0151 }
-            java.lang.Double r8 = r1.getInteres()     // Catch:{ Exception -> 0x0151 }
-            double r2 = r8.doubleValue()     // Catch:{ Exception -> 0x0151 }
-            java.lang.Double r8 = r1.getMora()     // Catch:{ Exception -> 0x0151 }
-            double r4 = r8.doubleValue()     // Catch:{ Exception -> 0x0151 }
-            double r2 = r2 + r4
-            java.lang.Double r8 = r1.getCapital()     // Catch:{ Exception -> 0x0151 }
-            double r4 = r8.doubleValue()     // Catch:{ Exception -> 0x0151 }
-            double r2 = r2 + r4
-            android.widget.TextView r7 = r7.tvTotal     // Catch:{ Exception -> 0x0151 }
-            java.text.DecimalFormat r8 = new java.text.DecimalFormat     // Catch:{ Exception -> 0x0151 }
-            r8.<init>(r0)     // Catch:{ Exception -> 0x0151 }
-            java.lang.String r8 = r8.format(r2)     // Catch:{ Exception -> 0x0151 }
-            r7.setText(r8)     // Catch:{ Exception -> 0x0151 }
-            goto L_0x0155
-        L_0x0151:
-            r7 = move-exception
-            r7.printStackTrace()
-        L_0x0155:
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: py.hvillalba.microsol_app.ui.recyclerCobros.RecyclerCobrosDet.onBindViewHolder(py.hvillalba.microsol_app.ui.recyclerCobros.CustomViewHolderCuotasDetalle, int):void");
+    public void onBindViewHolder(CustomViewHolderCuotasDetalle customViewHolderCuotasDetalle, int i) {
+        try {
+            SimpleDateFormat fechaFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
+            CobrosDTO cuotaDTO = this.lista.get(customViewHolderCuotasDetalle.getAdapterPosition());
+            DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
+            customViewHolderCuotasDetalle.tvCliente.setText(cuotaDTO.getCliente().getNombreapellido());
+            customViewHolderCuotasDetalle.tvNroCi.setText(cuotaDTO.getCliente().getNrodoc());
+            customViewHolderCuotasDetalle.tvCreditoNro.setText(cuotaDTO.getIdcredito().toString());
+            customViewHolderCuotasDetalle.tvCuota.setText(cuotaDTO.getNrocuota() +"/"+ cuotaDTO.getCantidadCuotas());
+            customViewHolderCuotasDetalle.tvFrecuencia.setText(cuotaDTO.getFormacobrocredito().getDescripcion());
+            customViewHolderCuotasDetalle.tvFCobro.setText(cuotaDTO.getTipocredito().getDescripcion());
+            customViewHolderCuotasDetalle.tvDesembolso.setText(cuotaDTO.getFechacobro() == null ? "" : fechaFormat.format(cuotaDTO.getFechacobro()));
+            customViewHolderCuotasDetalle.tvVencimiento.setText(cuotaDTO.getFechavencimiento() == null ? "" : fechaFormat.format(cuotaDTO.getFechavencimiento()));
+            customViewHolderCuotasDetalle.tvFechaUltPago.setText(cuotaDTO.getFechacobro() == null ? "" : fechaFormat.format(cuotaDTO.getFechacobro()));
+            if (cuotaDTO.getAtraso() == 1){
+                customViewHolderCuotasDetalle.tvDiasAtraso.setText( cuotaDTO.getAtraso() + " dia");
+            }else if(cuotaDTO.getAtraso() > 1) {
+                customViewHolderCuotasDetalle.tvDiasAtraso.setText( cuotaDTO.getAtraso() + " dias");
+            }
+            customViewHolderCuotasDetalle.tvMora.setText(decimalFormat.format(cuotaDTO.getMora()));
+            customViewHolderCuotasDetalle.tvCapital.setText(decimalFormat.format(cuotaDTO.getCapital()));
+            customViewHolderCuotasDetalle.tvInteres.setText(decimalFormat.format(cuotaDTO.getInteres()));
+            double interes = cuotaDTO.getInteres();
+            double mora = cuotaDTO.getMora();
+            double capital = cuotaDTO.getCapital();
+            customViewHolderCuotasDetalle.tvTotal.setText(decimalFormat.format(interes+mora+capital));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public int getItemCount() {

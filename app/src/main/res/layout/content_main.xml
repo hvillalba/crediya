@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
-    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent">
-        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-            <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:src="@drawable/crediya"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/crediya"/>
             <Button android:textColor="@color/white"
-                android:id="@+id/btnConsultarExtracto" android:background="@drawable/custom_button_rounded_green" android:layout_width="match_parent" android:layout_height="56dp" android:layout_margin="10dp" android:text="Consultar Extracto clientes"/>
-            <Button android:textColor="@color/white" android:id="@+id/btnConsultarCartera" android:background="@drawable/custom_button_rounded_green" android:layout_width="match_parent" android:layout_height="56dp" android:layout_margin="10dp" android:text="Consultar Cartera de clientes"/>
+                android:id="@+id/btnConsultarExtracto"
+                android:background="@drawable/custom_button_rounded_green"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_margin="10dp"
+                android:text="Consultar Extracto clientes"/>
+            <Button android:textColor="@color/white"
+                android:id="@+id/btnConsultarCartera"
+                android:background="@drawable/custom_button_rounded_green"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_margin="10dp"
+                android:text="Consultar Cartera de clientes"/>
             <Button android:textColor="@color/white"
                 android:id="@+id/btnCuotasAtrasadas"
                 android:background="@drawable/custom_button_rounded_green"

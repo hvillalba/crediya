@@ -183,7 +183,8 @@ public class CuotasAtrasadasActivity extends AppCompatActivity {
                 cliente = cuotaAtrasadaDTO.getCliente();
             }
         }
-        this.tvTotal.setText("Gs. " + this.decimalFormat.format(this.totalMora + this.totalCapitales + this.totalIntereses));
+        this.tvTotal.setText("Gs. " + this.decimalFormat.format( this.totalCapitales + this.totalIntereses));
+        //this.tvTotal.setText("Gs. " + this.decimalFormat.format(this.totalMora + this.totalCapitales + this.totalIntereses));
         //this.tvMora.setText("Gs. " + this.decimalFormat.format(this.totalMora));
         this.tvCapital.setText("Gs. " + this.decimalFormat.format(this.totalCapitales));
         this.tvInteres.setText("Gs. " + this.decimalFormat.format(this.totalIntereses));

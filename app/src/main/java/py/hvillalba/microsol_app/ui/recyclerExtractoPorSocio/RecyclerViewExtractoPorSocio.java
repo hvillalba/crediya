@@ -24,7 +24,8 @@ public class RecyclerViewExtractoPorSocio extends RecyclerView.Adapter<CustomVie
     }
 
     public CustomViewHolderExtractoPorSocio onCreateViewHolder(ViewGroup viewGroup, int i) {
-        return new CustomViewHolderExtractoPorSocio(LayoutInflater.from(this.context).inflate(R.layout.extracto_socio, viewGroup, false));
+        return new CustomViewHolderExtractoPorSocio(LayoutInflater.from(this.context)
+                .inflate(R.layout.extracto_socio, viewGroup, false));
     }
 
     public void onBindViewHolder(CustomViewHolderExtractoPorSocio customViewHolderExtractoPorSocio, int i) {

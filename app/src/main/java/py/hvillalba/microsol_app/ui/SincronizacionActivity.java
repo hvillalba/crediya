@@ -59,7 +59,7 @@ public class SincronizacionActivity extends AppCompatActivity {
     }
 
     public /* synthetic */ void lambda$onCreate$0$SincronizacionActivity(View view) {
-        this.progressBar.setVisibility(View.GONE);
+        this.progressBar.setVisibility(View.VISIBLE);
         clearDB();
         cargarCuotasAtrasadas();
         cobrosDelDia();

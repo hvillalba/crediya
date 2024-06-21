@@ -41,7 +41,7 @@ public class Constant {
     public static final String SALIDA = "salida";
     public static final int TYPE_DELIVERY = 1;
     public static final int TYPE_PICKUP = 2;
-    public static final String URL_PATH = "http://181.122.126.4:8080/credi-rest/api/v1/";
+    public static final String URL_PATH = "http://181.122.126.12:8080/credi-rest/api/v1/";
             //"http://181.122.126.180:8080/credi-rest/api/v1/";
     public static final String URL_PERFIL = "url_perfil";
 }

@@ -1,26 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:background="@color/grayActivity" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="5dp" app:cardCornerRadius="4dp" app:cardElevation="2dp">
-        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-                <TextView android:textSize="6pt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="cliente"/>
-                <TextView android:textSize="7pt" android:textColor="@android:color/black" android:id="@+id/tvCliente" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="Hector Alfredo Villalba"/>
-                <TextView android:textSize="7pt" android:textColor="@color/blackButton" android:id="@+id/tvCi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="5.480.104"/>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:orientation="horizontal"
+    android:background="@color/estadoVerde"
+    android:padding="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="4dp"
+        android:background="@color/black"
+        app:cardElevation="2dp">
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black">
+            <LinearLayout android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:textSize="6pt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gris"
+                    android:layout_marginLeft="5dp"
+                    android:text="cliente"/>
+                <TextView android:textSize="7pt"
+                    android:textColor="@android:color/white"
+                    android:id="@+id/tvCliente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Hector Alfredo Villalba"/>
+                <TextView android:textSize="7pt"
+                    android:textColor="@color/white"
+                    android:id="@+id/tvCi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="5.480.104"/>
             </LinearLayout>
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
-                <LinearLayout android:layout_gravity="left" android:orientation="vertical" android:padding="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="60">
-                    <TextView android:textSize="6pt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="telefono"/>
-                    <TextView android:textSize="7pt" android:textColor="@color/blackButton" android:id="@+id/tvTelefono" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0985313763" android:layout_weight="60"/>
-                    <TextView android:textSize="6pt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="capital"/>
-                    <TextView android:textSize="7pt" android:textColor="@color/blackButton" android:id="@+id/tvCapital" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5.000.000"/>
-                    <TextView android:textSize="6pt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="nro. credito"/>
-                    <TextView android:textSize="7pt" android:textColor="@color/blackButton" android:id="@+id/tvCredito" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="123"/>
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout android:layout_gravity="left"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="60">
+                    <TextView android:textSize="6pt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gris"
+                        android:text="telefono"/>
+                    <TextView android:textSize="7pt"
+                        android:textColor="@color/white"
+                        android:id="@+id/tvTelefono"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0985313763"
+                        android:layout_weight="60"/>
+                    <TextView android:textSize="6pt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gris"
+                        android:text="capital"/>
+                    <TextView android:textSize="7pt"
+                        android:textColor="@color/white"
+                        android:id="@+id/tvCapital"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5.000.000"/>
+                    <TextView android:textSize="6pt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gris"
+                        android:text="nro. credito"/>
+                    <TextView android:textSize="7pt"
+                        android:textColor="@color/white"
+                        android:id="@+id/tvCredito"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="123"/>
                 </LinearLayout>
-                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="30">
-                    <TextView android:textSize="6pt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="saldo capital"/>
-                    <TextView android:textSize="7pt" android:textColor="@color/blackButton" android:id="@+id/tvSaldoCapital" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5.000.000"/>
-                    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="0dp" android:layout_weight="50">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="estado"/>
+                <LinearLayout android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30">
+                    <TextView android:textSize="6pt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gris"
+                        android:text="saldo capital"/>
+                    <TextView android:textSize="7pt"
+                        android:textColor="@color/white"
+                        android:id="@+id/tvSaldoCapital"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5.000.000"/>
+                    <LinearLayout android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="50">
+                        <TextView android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gris"
+                            android:text="estado"/>
                         <TextView android:textSize="7pt" android:textColor="@color/estadoRojo" android:id="@+id/tvEstado" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ESTADO"/>
                     </LinearLayout>
                     <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">

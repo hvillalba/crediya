@@ -24,6 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 import py.hvillalba.microsol_app.R;
 import py.hvillalba.microsol_app.data.CuotaDTO;
+import py.hvillalba.microsol_app.ui.dialog.DialogFullAnimationTrans;
 import py.hvillalba.microsol_app.ui.recyclerExtractoPorSocio.RecyclerViewExtractoPorSocio;
 
 public class ConsultarExtractoActivity extends AppCompatActivity {
@@ -39,6 +40,7 @@ public class ConsultarExtractoActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     TextView tvCliente;
     TextView tvTelefono;
+    DialogFullAnimationTrans dialogFullAnimationTrans;
 
     /* access modifiers changed from: protected */
     public void onCreate(Bundle bundle) {
@@ -47,6 +49,7 @@ public class ConsultarExtractoActivity extends AppCompatActivity {
         setTitle("Consultar Extracto");
         this.editText = (EditText) findViewById(R.id.edNroDocumento);
         this.checkBox = (CheckBox) findViewById(R.id.checkbox);
+        dialogFullAnimationTrans = new  DialogFullAnimationTrans(this);
         this.editText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
                 if (i != 6) {
@@ -61,17 +64,18 @@ public class ConsultarExtractoActivity extends AppCompatActivity {
         this.recyclerView = recyclerView2;
         recyclerView2.setHasFixedSize(true);
         this.recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        this.progressBar = (ProgressBar) findViewById(R.id.loading);
+        progressBar = (ProgressBar) findViewById(R.id.loading);
         this.realm = Realm.getDefaultInstance();
         this.btnConsultar.setOnClickListener(new View.OnClickListener() {
             public final void onClick(View view) {
+
                 ConsultarExtractoActivity.this.lambda$onCreate$0$ConsultarExtractoActivity(view);
             }
         });
     }
 
     public /* synthetic */ void lambda$onCreate$0$ConsultarExtractoActivity(View view) {
-        this.progressBar.setVisibility(View.GONE);
+        dialogFullAnimationTrans.show();
         String[] strArr = {"nombreapellido", "idcredito", "nrocuota"};
         Sort[] sortArr = {Sort.ASCENDING, Sort.ASCENDING, Sort.ASCENDING};
         if (this.checkBox.isChecked()) {
@@ -105,7 +109,7 @@ public class ConsultarExtractoActivity extends AppCompatActivity {
             this.adapter = recyclerViewExtractoPorSocio;
             this.recyclerView.setAdapter(recyclerViewExtractoPorSocio);
             this.recyclerView.setVisibility(View.VISIBLE);
-            this.progressBar.setVisibility(View.GONE);
+            dialogFullAnimationTrans.dismiss();
             return;
         }
         Snackbar.make((View) this.recyclerView, (CharSequence) "No se encontraron datos", Snackbar.LENGTH_LONG).show();
